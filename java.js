@@ -1,14 +1,15 @@
 /*-------------ejercicio 1-----------------------*/
-var edad = 60;
+var edad = 59;
+var simon = 59;
 
-if (edad > 59) {
+if (edad > simon) {
   console.log("mayor");
 }
 
-if (edad >= 59) {
+if (edad == simon) {
   console.log("igual");
 }
-if (edad < 59) {
+if (edad < simon) {
   console.log("menor");
 }
 
@@ -90,12 +91,28 @@ for (i = 0; i < pares.length; i++) {
 var n1;
 var n2;
 var suma;
-let fin=[]
+var suma2;
+var contador=0;
+let fin = [];
 
+
+  n1= Math.floor(Math.random()*6)+1;
+  n2= Math.floor(Math.random()*6)+1;
+  suma2=n1+n2;
 
 for (i = 0; i < 36000; i++) {
-    n1= Math.random(1, 6);
-    n2= Math.random(1, 6);
+    n1= Math.floor(Math.random()*6)+1;
+    n2= Math.floor(Math.random()*6)+1;
     suma=n1+n2;
-    fin.push(suma);
+    if (suma == suma2) {
+      contador=contador+ 1;
+      fin.push(contador);
+    }
 }
+
+console.log(fin);
+console.log(suma2);
+console.log(contador);
+
+/*--------------------------ejercicio 9----------------------------------*/
+
